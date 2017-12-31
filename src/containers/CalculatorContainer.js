@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import Calculator from '../components/Calculator'
 
 const mapStateToProps = state => ({
-    selectedNum: state.selectedNum
+    displayNum: state.displayNum
 })
 
 const mapDispatchToProps = dispatch => ({

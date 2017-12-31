@@ -13,14 +13,14 @@ const numStyle = {
     color: 'white'
 }
 
-const CalcDisplay = ({selectedNum}) => (
+const CalcDisplay = ({displayNum}) => (
     <Paper zDepth={1} style={paperStyle}>
-        <div style={numStyle}>{selectedNum}</div>
+        <div style={numStyle}>{displayNum}</div>
     </Paper>
 );
 
 CalcDisplay.propTypes = {
-    selectedNum: PropTypes.number.isRequired
+    displayNum: PropTypes.string.isRequired
 }
 
 export default CalcDisplay

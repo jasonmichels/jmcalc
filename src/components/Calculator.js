@@ -11,15 +11,15 @@ const paperStyle = {
     minWidth: '330px'
 }
 
-const Calculator = ({selectedNum}) => (
+const Calculator = ({displayNum}) => (
     <Paper zDepth={1} style={paperStyle}>
-        <CalcDisplay selectedNum={selectedNum} />
+        <CalcDisplay displayNum={displayNum} />
         <CalcNumbersContainer />
     </Paper>
 );
 
 Calculator.propTypes = {
-    selectedNum: PropTypes.number.isRequired
+    displayNum: PropTypes.string.isRequired
 }
 
 export default Calculator
