@@ -9,6 +9,12 @@ $ yarn install
 $ yarn start
 ```
 
+## Production Deployment
+```sh
+$ forever start index.js
+$ PORT=80 forever start /usr/local/bin/serve -s /jmcalc/build
+```
+
 ### Tech
 * [Javascript] - ReactJS
 
