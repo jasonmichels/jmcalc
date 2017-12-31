@@ -22,7 +22,7 @@ const calculations = (
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
-        items: state.items.concat([action.calculation]),
+        items: [action.calculation].concat(state.items),
         lastUpdated: action.receivedAt
       })
     default:
