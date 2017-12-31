@@ -5,7 +5,7 @@ export const apiVersion = 'v1';
 const hostname = window && window.location && window.location.hostname;
 
 switch (hostname) {
-    case 'productionhost':
+    case 'bikefreetv.com':
         backendHost = 'http://bikefreetv.com:3001';
         break;
     default:
