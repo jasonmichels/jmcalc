@@ -1,8 +1,8 @@
 // import fetch from 'isomorphic-fetch'
 // import { requestCalculations, receiveCalculations } from '../actions'
-// import {config} from './config'
+import {config} from './config'
 import io from 'socket.io-client';
-export const socket = io('http://localhost:3001');
+export const socket = io(config.backendHost);
 
 // const fetchCalculations = () => {
 //     return (dispatch) => {

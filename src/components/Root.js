@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import DevTools from '../containers/DevTools';
+// import DevTools from '../containers/DevTools';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './Root.css';
 import AppBar from 'material-ui/AppBar';
@@ -18,7 +18,7 @@ const Root = ({ store }) => (
                 />
                 <CalculatorContainer /> 
                 <CalculationsContainer />
-                <DevTools />
+                {/* <DevTools /> */}
                 <Footer />
             </div>
         </MuiThemeProvider>
