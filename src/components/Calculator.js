@@ -8,7 +8,8 @@ const paperStyle = {
     padding: '20px',
     backgroundColor: 'black',
     maxWidth: '330px',
-    minWidth: '330px'
+    minWidth: '330px',
+    margin: 20,
 }
 
 const Calculator = ({displayNum}) => (

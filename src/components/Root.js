@@ -6,6 +6,7 @@ import './Root.css';
 import AppBar from 'material-ui/AppBar';
 import Footer from '../components/Footer'
 import CalculatorContainer from '../containers/CalculatorContainer'
+import CalculationsContainer from '../containers/CalculationsContainer'
 
 const Root = ({ store }) => (
     <Provider store={store}>
@@ -16,6 +17,7 @@ const Root = ({ store }) => (
                 showMenuIconButton={false}
                 />
                 <CalculatorContainer /> 
+                <CalculationsContainer />
                 <DevTools />
                 <Footer />
             </div>

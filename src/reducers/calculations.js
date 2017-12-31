@@ -1,4 +1,4 @@
-import { INVALIDATE_CALCULATIONS, REQUEST_CALCULATIONS, RECEIVE_CALCULATIONS } from '../actions'
+import { RECEIVE_CALCULATION } from '../actions'
 
 const calculations = (
   state = {
@@ -9,20 +9,20 @@ const calculations = (
   action
 ) => {
   switch (action.type) {
-    case INVALIDATE_CALCULATIONS:
-      return Object.assign({}, state, {
-        didInvalidate: true
-      })
-    case REQUEST_CALCULATIONS:
-      return Object.assign({}, state, {
-        isFetching: true,
-        didInvalidate: false
-      })
-    case RECEIVE_CALCULATIONS:
+    // case INVALIDATE_CALCULATIONS:
+    //   return Object.assign({}, state, {
+    //     didInvalidate: true
+    //   })
+    // case REQUEST_CALCULATIONS:
+    //   return Object.assign({}, state, {
+    //     isFetching: true,
+    //     didInvalidate: false
+    //   })
+    case RECEIVE_CALCULATION:
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
-        items: action.calculations,
+        items: state.items.concat([action.calculation]),
         lastUpdated: action.receivedAt
       })
     default:
