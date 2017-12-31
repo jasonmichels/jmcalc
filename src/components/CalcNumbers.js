@@ -13,7 +13,7 @@ const numStyle = {
     color: white
 };
 
-const CalcNumbers = ({onNumberSelect, onPlusSelect, onClearSelect, onEqualsSelect}) => (
+const CalcNumbers = ({onNumberSelect, onPlusSelect, onClearSelect, onEqualsSelect, displayNum}) => (
     <div>
         <div>
             <FloatingActionButton style={style} onClick={e => {onNumberSelect(7)}}><span style={numStyle}>7</span></FloatingActionButton>
@@ -31,7 +31,7 @@ const CalcNumbers = ({onNumberSelect, onPlusSelect, onClearSelect, onEqualsSelec
             <FloatingActionButton style={style} onClick={e => {onNumberSelect(1)}}><span style={numStyle}>1</span></FloatingActionButton>
             <FloatingActionButton style={style} onClick={e => {onNumberSelect(2)}}><span style={numStyle}>2</span></FloatingActionButton>
             <FloatingActionButton style={style} onClick={e => {onNumberSelect(3)}}><span style={numStyle}>3</span></FloatingActionButton>
-            <FloatingActionButton secondary={true} style={style} onClick={e => {onEqualsSelect()}}><span style={numStyle}>=</span></FloatingActionButton>
+            <FloatingActionButton secondary={true} style={style} onClick={e => {onEqualsSelect(displayNum)}}><span style={numStyle}>=</span></FloatingActionButton>
         </div>
         <div className="section group">
             <div className="col span_4_of_12"></div>
@@ -45,7 +45,8 @@ CalcNumbers.propTypes = {
     onNumberSelect: PropTypes.func.isRequired,
     onPlusSelect: PropTypes.func.isRequired,
     onClearSelect: PropTypes.func.isRequired,
-    onEqualsSelect: PropTypes.func.isRequired
+    onEqualsSelect: PropTypes.func.isRequired,
+    displayNum: PropTypes.object.isRequired
   }
 
 export default CalcNumbers

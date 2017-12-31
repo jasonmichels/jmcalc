@@ -1,4 +1,4 @@
-import { USER_SELECTED_NUM, USER_SELECTED_CLEAR, USER_SELECTED_ADDITION } from '../actions'
+import { USER_SELECTED_NUM, USER_SELECTED_CLEAR, USER_SELECTED_ADDITION, USER_SELECTED_EQUALS } from '../actions'
 
 const start = {
     display: "0",
@@ -56,7 +56,9 @@ const displayNum = (
             })
         }
 
-        return state      
+        return state  
+    case USER_SELECTED_EQUALS:
+        return Object.assign({}, state, start)
     default:
       return state
   }

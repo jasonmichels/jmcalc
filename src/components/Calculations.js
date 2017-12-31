@@ -6,7 +6,7 @@ import CloudFile from 'material-ui/svg-icons/file/cloud';
 import Subheader from 'material-ui/Subheader';
 
 const displayEmptyListMsg = (length) => {
-    if (length == 0) {
+    if (length === 0) {
         return <div style={{color: 'red'}}>No Calculations To Display <br />Submit a calculation and watch this auto update when others submit also</div>
     }
     return
@@ -26,7 +26,7 @@ const Calculations = ({calculations, calculationLength}) => (
             <List>
             <Subheader>Recent Calculations</Subheader>
             {calculations.map(calc =>
-                    <ListItem primaryText={calc} leftIcon={<CloudFile />} />
+                    <ListItem key={calc.id} primaryText={calc.equation} leftIcon={<CloudFile />} />
             )}
             </List>
             {displayEmptyListMsg(calculationLength)}

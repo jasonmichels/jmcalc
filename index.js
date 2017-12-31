@@ -6,7 +6,7 @@ var port = process.env.PORT || 3001;
 io.on('connection', function(socket){
     console.log("User connected")
     socket.on('submitCalculation', function(calculation){
-        console.log('This is calculation ' + calculation)
+        console.log('This is calculation ID ' + calculation.id + ' and equation: ' + calculation.equation)
         io.emit('newCalculation', calculation);
     });
 });
