@@ -20,7 +20,7 @@ const CalcDisplay = ({selectedNum}) => (
 );
 
 CalcDisplay.propTypes = {
-    selectedNum: PropTypes.number
+    selectedNum: PropTypes.number.isRequired
 }
 
 export default CalcDisplay

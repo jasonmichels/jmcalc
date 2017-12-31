@@ -6,13 +6,13 @@ import Root from './components/Root';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import configureStore from './store/configureStore';
 import registerServiceWorker from './registerServiceWorker';
-import { invalidateCalculations } from './actions'
-import { fetchCalculationsIfNeeded } from './api/calc'
+// import { invalidateCalculations } from './actions'
+// import { fetchCalculationsIfNeeded } from './api/calc'
 
 const store = configureStore();
 
-store.dispatch(invalidateCalculations())
-store.dispatch(fetchCalculationsIfNeeded())
+// store.dispatch(invalidateCalculations())
+// store.dispatch(fetchCalculationsIfNeeded())
 
 injectTapEventPlugin();
 

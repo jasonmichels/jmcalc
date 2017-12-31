@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './Root.css';
 import AppBar from 'material-ui/AppBar';
 import Footer from '../components/Footer'
-import Calculator from '../components/Calculator'
+import CalculatorContainer from '../containers/CalculatorContainer'
 
 const Root = ({ store }) => (
     <Provider store={store}>
@@ -15,7 +15,7 @@ const Root = ({ store }) => (
                 title="Jason's Calculator"
                 showMenuIconButton={false}
                 />
-                <Calculator /> 
+                <CalculatorContainer /> 
                 <DevTools />
                 <Footer />
             </div>

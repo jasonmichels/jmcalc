@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import CalcNumbers from '../components/CalcNumbers'
+import {userSelectedNum} from '../actions'
 
 const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => ({
     onNumberSelect: (number) => {
-        // dispatch(aFunctionCAll(model, resetForm, invalidateForm))
-        alert(number)
+        dispatch(userSelectedNum(number))
     }
 })
 

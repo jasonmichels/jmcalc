@@ -14,3 +14,9 @@ export const receiveCalculations = (json) => ({
     calculations: json.data.map(child => child),
     receivedAt: Date.now()
 })
+
+export const USER_SELECTED_NUM = 'USER_SELECTED_NUM'
+export const userSelectedNum = (number) =>  ({
+    type: USER_SELECTED_NUM,
+    number: number
+})

@@ -1,5 +1,4 @@
 import React from 'react'
-import RaisedButton from 'material-ui/RaisedButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import { white } from 'material-ui/styles/colors';
 import ContentBack from 'material-ui/svg-icons/content/backspace';
