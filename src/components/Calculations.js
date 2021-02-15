@@ -7,7 +7,7 @@ import Subheader from 'material-ui/Subheader';
 
 const displayEmptyListMsg = (length) => {
     if (length === 0) {
-        return <div style={{color: 'red'}}>No Calculations To Display <br />Submit a calculation and watch this auto update when others submit also</div>
+        return <div style={{color: 'red'}}>No Calculations To Display <br />Submit a calculation and watch this auto update</div>
     }
     return
 }

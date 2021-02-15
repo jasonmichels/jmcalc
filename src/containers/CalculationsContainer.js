@@ -7,8 +7,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    // onTesting: (number) => {
-    // }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calculations);

@@ -9,15 +9,6 @@ const calculations = (
   action
 ) => {
   switch (action.type) {
-    // case INVALIDATE_CALCULATIONS:
-    //   return Object.assign({}, state, {
-    //     didInvalidate: true
-    //   })
-    // case REQUEST_CALCULATIONS:
-    //   return Object.assign({}, state, {
-    //     isFetching: true,
-    //     didInvalidate: false
-    //   })
     case RECEIVE_CALCULATION:
       return Object.assign({}, state, {
         isFetching: false,

@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import CalcNumbers from '../components/CalcNumbers'
-import {userSelectedNum, userSelectedAddition, userSelectedClear, userSelectedEquals} from '../actions'
-import {socket} from '../api/calc'
+import {userSelectedNum, userSelectedAddition, userSelectedClear, userSelectedEquals, receiveCalculation} from '../actions'
 const uuidv4 = require('uuid/v4');
 
 const shouldSubmitCalculation = (addends) => {
@@ -24,16 +23,16 @@ const mapDispatchToProps = dispatch => ({
     },
     onEqualsSelect: (displayNum) => {
         if (shouldSubmitCalculation(displayNum.addends)) {
-            var equation = ''
+            let equation = ''
             displayNum.addends.forEach(num => {
                 equation = equation + num + ' + '
             })
 
-            var newTotal = displayNum.total + displayNum.number
+            const newTotal = displayNum.total + displayNum.number
             equation = equation + displayNum.number + ' = ' + newTotal
 
-            socket.emit('submitCalculation', {id: uuidv4(), equation: equation});   
             dispatch(userSelectedEquals())
+            dispatch(receiveCalculation({id: uuidv4(), equation: equation}))
         } else {
             alert("You must perform at least one calculation before submitting calculation. Please try again")
         }        

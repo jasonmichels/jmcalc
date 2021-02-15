@@ -37,7 +37,7 @@ const displayNum = (
                     number: 0
                 })
             } else {
-                var newTotal = state.total + state.number
+                let newTotal = state.total + state.number
                 return Object.assign({}, state, {
                     display: newTotal.toString(),
                     number: 0,
@@ -58,7 +58,13 @@ const displayNum = (
 
         return state  
     case USER_SELECTED_EQUALS:
-        return Object.assign({}, state, start)
+        let newTotal = state.total + state.number
+        return Object.assign({}, state, {
+            display: newTotal.toString(),
+            number: 0,
+            addends: state.addends.concat([state.number]),
+            total: newTotal
+        })
     default:
       return state
   }
